@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capstone Web App</title>
+
+  <style>
+    /* Reset & Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .navbar .logo {
+      float: left;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+    .nav-links {
+      float: right;
+      list-style: none;
+      margin-right: 1rem;
+    }
+    .nav-links li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+    .hero-content p {
+      margin: 1rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    /* Form */
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    form button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #218838;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .nav-links li {
+        display: block;
+        margin: 10px 0;
+      }
+      .hero {
+        height: 50vh;
+      }
+      .features-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">MyWebApp</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="clear: both;"></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome to My Capstone Project</h2>
+      <p>Modern, responsive and optimized web application built from scratch.</p>
+      <a href="#features" class="btn">Explore Features</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Fast & Optimized</h3>
+          <p>Clean code with lazy-loaded images and minified styles.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Mobile Responsive</h3>
+          <p>Fully responsive layout that works on all devices.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cross-Browser Compatible</h3>
+          <p>Tested and working on Chrome, Firefox, Edge and Safari.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About This Project</h2>
+      <p>This is a complete demo project showcasing integration of HTML, CSS, and JavaScript into a performance-optimized, mobile-first, cross-browser compatible web application.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyWebApp. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth Scroll (for demo navigation)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
